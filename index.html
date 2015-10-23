@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ordinary Least Squares</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Ordinary Least Squares">
+  <meta name="author" content="Cristian Santa">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Ordinary Least Squares</h1>
+    <h2>Simulation App</h2>
+    <p>Cristian Santa<br/>statistician</p>
+  </hgroup>
+    <a href="https://github.com///zipball/gh-pages" class="example">
+     Download
+    </a>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>OLS</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><a href="https://en.wikipedia.org/wiki/Ordinary_least_squares">Ordinary Least Squares</a> is a method for estimating the unknown parameters in a linear regression model, with the goal of minimizing the differences between the observed responses in some arbitrary dataset and the responses predicted by the linear approximation of the data.</p>
+
+<style type='text/css'>
+img {
+    max-height: 400px;
+    max-width: 600px;
+}
+</style>
+
+<p><img src="App.png" alt=""></p>
+
+<script type='text/javascript'>
+$(function() {
+    $("p:has(img)").addClass('centered');
+});
+</script>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>The App</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>In this App you will manipulate the dataset and fit model, change the options of the plot, as well as on/off the intercept of the model, change the proportional scheme, and Set Seed for randomly data.</p>
+
+<p>The data is generating by two normal random variables like this.</p>
+
+<script type="text/x-mathjax-config">
+   MathJax.Hub.Config({  "HTML-CSS": { minScaleAdjust: 120, availableFonts: [] }  });
+</script>
+
+<p><br>
+\[x\sim N(0,\sigma_{x}+2)\]
+<br>
+\[u\sim N(0,\sigma_{u})\]</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Models &amp; Data Generating Process</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <h3>Data Generating Process</h3>
+
+<p>\(y=2+3x+u\)
+<br>
+<br>
+\(y=2+3x-0.5x^2+u\)
+<br>
+<br>
+\(y=-10-1.5x+x^2+u\)
+<br>
+<br>
+\(y=-2x-0.5x^2+u\)
+<br>
+<br>
+\(y=5+x-0.1e^{x}+u\)
+<br>
+<br>
+\(y=0.2e^{x}+u10\)
+<br>
+<br>
+\(y=-4-2x^2+0.4e^{x}-x^2+u^5\)
+<br>
+<br>
+\(y=-1-2x+1.5x^2-1.5x^3-0.05x^4+10^{-4}x^5+u^5\)</p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <h3>Fit Models</h3>
+
+<p>\(y\sim x\)
+<br>
+\(y\sim x^2\)
+<br>
+\(y\sim e^{x}\)
+<br>
+\(y\sim x+x^2\)
+<br>
+\(y\sim x+e^{x}\)
+<br>
+\(y\sim x+x^2+e^{x}\)
+<br>
+\(y\sim x+x^2+x^3+x^4+x^5\) </p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4">
+<hgroup>
+  <h2>Run The App</h2>
+</hgroup>
+<article class = 'flexbox vcenter'>
+<h3>Simulation OLS Application</h3>
+
+<h1><a href="https://cdsantae.shinyapps.io/OLS_App">Click Here</a></h1>
+
+</article>
+<!-- Presenter Notes -->
+</slide>
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='OLS'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='The App'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Models &amp; Data Generating Process'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Run The App'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
